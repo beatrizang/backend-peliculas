@@ -4,24 +4,19 @@
  */
 package com.peliculas.mispelis.models.services;
 
-import com.peliculas.mispelis.models.entity.Generos;
-import com.peliculas.mispelis.models.entity.Peliculas;
+import com.peliculas.mispelis.models.entity.Listas;
 import java.util.List;
 
 /**
  *
  * @author Beatriz
  */
-public interface IPeliculasService {
-    public List<Peliculas> findAll();
+public interface IListasService {
+    public List<Listas> findAll();
     
-    public Peliculas findById(Long id);
+    public Listas findById(Long id);
     
-    public Peliculas save(Peliculas pelicula);
+    public Listas save(Listas lista);
     
     public void delete(Long id);
-    
-    public List <Generos> findAllGeneros();
-    
-    
 }

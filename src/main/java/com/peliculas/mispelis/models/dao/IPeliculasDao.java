@@ -4,13 +4,19 @@
  */
 package com.peliculas.mispelis.models.dao;
 
+import com.peliculas.mispelis.models.entity.Generos;
 import com.peliculas.mispelis.models.entity.Peliculas;
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author Beatriz
  */
-public interface IPeliculasDao extends CrudRepository<Peliculas,Long>{
+public interface IPeliculasDao extends JpaRepository<Peliculas,Long>{
     
+    @Query("from Generos")
+    public List <Generos> findAllGeneros();
 }

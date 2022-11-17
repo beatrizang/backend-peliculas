@@ -5,6 +5,7 @@
 package com.peliculas.mispelis.models.services;
 
 import com.peliculas.mispelis.models.dao.IPeliculasDao;
+import com.peliculas.mispelis.models.entity.Generos;
 import com.peliculas.mispelis.models.entity.Peliculas;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,12 @@ public class PeliculasServiceImpl implements IPeliculasService{
     @Transactional
     public void delete(Long id) {
         peliculasDao.deleteById(id);
+    }
+
+    @Override
+    @Transactional(readOnly=true)
+    public List<Generos> findAllGeneros() {
+        return peliculasDao.findAllGeneros();
     }
     
 }

@@ -4,6 +4,7 @@
  */
 package com.peliculas.mispelis.controllers;
 
+import com.peliculas.mispelis.models.entity.Generos;
 import com.peliculas.mispelis.models.entity.Peliculas;
 import com.peliculas.mispelis.models.services.IPeliculasService;
 import java.util.List;
@@ -56,6 +57,7 @@ public class PeliculasRestController {
         peliculaActual.setAnio_estreno(pelicula.getAnio_estreno());
         peliculaActual.setDuracion(pelicula.getDuracion());
         peliculaActual.setPortada(pelicula.getPortada());
+        peliculaActual.setGeneros(pelicula.getGeneros());
         
         return peliculasService.save(peliculaActual);
     }
@@ -66,4 +68,9 @@ public class PeliculasRestController {
         peliculasService.delete(id);
     }
     
+    @GetMapping("/peliculas/generos")
+    public List<Generos> listarGeneros(){
+        return peliculasService.findAllGeneros();
+    }
+
 }

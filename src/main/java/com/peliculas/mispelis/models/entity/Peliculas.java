@@ -4,13 +4,21 @@
  */
 package com.peliculas.mispelis.models.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -37,9 +45,33 @@ public class Peliculas implements Serializable{
     
     @Column(length=200)
     private String portada;
+    
+
+    @JoinTable(
+        name = "peliculas_generos",
+        joinColumns = @JoinColumn(name = "id_pelicula", nullable = false),
+        inverseJoinColumns = @JoinColumn(name="id_genero", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Generos> generos;
+   
+    public void addGenero(Generos genero){
+        if(this.generos == null){
+            this.generos = new ArrayList<>();
+        }        
+        this.generos.add(genero);
+    }
 
     public Long getId_pelicula() {
         return id_pelicula;
+    }
+
+    public List<Generos> getGeneros() {
+        return generos;
+    }
+
+    public void setGeneros(List<Generos> generos) {
+        this.generos = generos;
     }
 
     public void setId_pelicula(Long id_pelicula) {

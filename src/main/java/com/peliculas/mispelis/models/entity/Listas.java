@@ -4,15 +4,11 @@
  */
 package com.peliculas.mispelis.models.entity;
 
-import com.sun.istack.NotNull;
 import java.io.Serializable;
-import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -20,26 +16,21 @@ import javax.persistence.Table;
  * @author Beatriz
  */
 @Entity
-@Table(name="Generos")
-public class Generos implements Serializable{
+@Table(name="Listas")
+public class Listas implements Serializable{
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id_genero;
+    private Long id;
     
-    @NotNull
-    @Column(length=50)
     private String nombre;
-    
-    @ManyToMany(mappedBy = "generos")
-    private List<Peliculas> peliculas;
 
-    public Long getId_genero() {
-        return id_genero;
+    public Long getId() {
+        return id;
     }
 
-    public void setId_genero(Long id_genero) {
-        this.id_genero = id_genero;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -50,6 +41,5 @@ public class Generos implements Serializable{
         this.nombre = nombre;
     }
     
-    private static final long serialVersionUID = 1L;
     
 }

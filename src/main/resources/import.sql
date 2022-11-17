@@ -38,3 +38,52 @@ INSERT INTO Peliculas (id_pelicula,titulo,duracion,anio_estreno) VALUES (7,'JOKE
 INSERT INTO Peliculas (id_pelicula,titulo,duracion,anio_estreno) VALUES (8,'COCO',109,2017);
 INSERT INTO Peliculas (id_pelicula,titulo,duracion,anio_estreno) VALUES (9,'SPIDER - MAN',121,2002);
 INSERT INTO Peliculas (id_pelicula,titulo,duracion,anio_estreno) VALUES (10,'EL VIAJE DE CHIHIRO',124,2001);
+
+INSERT INTO peliculas_generos (id_pelicula,id_genero) VALUES (1,13);
+INSERT INTO peliculas_generos (id_pelicula,id_genero) VALUES (1,10);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (2,13);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (2,24);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (3,6);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (3,1);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (4,9);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (5,2);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (5,3);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (5,18);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (5,20);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (6,10);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (6,13);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (7,10);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (7,13);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (8,2);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (8,9);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (8,13);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (9,1);
+
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (10,2);
+INSERT INTO PeliculasGeneros (id_pelicula,id_genero) VALUES (10,3);
+
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (1,'HAYAO','MIYAZAKI');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (2,'ROB','MINKOFF');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (3,'ROGER','ALLERS');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (4,'ANTONIO','GASALLA');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (5,'CHINA','ZORRILLA');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (6,'KEANU','REEVES');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (7,'LILLY','WACHOWSKI');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (8,'LANA','WACHOWSKI');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (9,'TOBEY','MAGUIRE');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (10,'NATALIE','PORTMAN');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (11,'EDWARD','NORTON');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (12,'BRAD','PITT');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (13,'JOAQUIN','PHOENIX');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (14,'MARLON','BRANDO');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (16,'LEE','UNKRICH');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (17,'ANGELINA','JOLIE');
+INSERT INTO Personas (id_persona,nombre,apellido) VALUES (18,'ROBERT','DE NIRO');
